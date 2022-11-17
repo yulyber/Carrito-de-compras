@@ -33,17 +33,13 @@ class ShoppingController extends GetxController {
     logInfo('agregarProducto $id');
     // TODO
     // Encontrar el elemento usando el id, revisar el método firstWhere de la lista
-  
-    for (int i = 0; i < entries.length; i++) {
-      if (entries[i].id == id) {
-        entries[i].quantity++;
-      }
-    }
+    Product elemento = entries.firstWhere((element) => element.id == id);
     // después obtener el index de ese elemento, revisar el método indexOf de la lista
+    var index = entries.indexOf(elemento);
     // después hacer el incremento en la cantidad
+    entries[index].quantity++;
     // finalmente actualizar entries usando el indice y el elemento actualizado
-    //
-
+    entries.refresh;
     calcularTotal();
   }
 
@@ -51,7 +47,20 @@ class ShoppingController extends GetxController {
     logInfo('quitarProducto $id');
     // TODO
     // similar a agregarProducto
+
+    // Encontrar el elemento usando el id, revisar el método firstWhere de la lista
+    Product elemento = entries.firstWhere((element) => element.id == id);
+    // después obtener el index de ese elemento, revisar el método indexOf de la lista
+    var index = entries.indexOf(elemento);
+    // después hacer el incremento en la cantidad
     // validar cuando la cantidad es igual a cero
+    if (entries[index].quantity > 0) {
+      entries[index].quantity--;
+    }
+
+    // finalmente actualizar entries usando el indice y el elemento actualizado
+    entries.refresh;
+
     calcularTotal();
   }
 }
