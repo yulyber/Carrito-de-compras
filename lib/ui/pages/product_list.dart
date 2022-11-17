@@ -17,11 +17,12 @@ class _ProductListState extends State<ProductList> {
 
     @override
   Widget build(BuildContext context) {
-  return Obx(() => Container(
-          child: Column(
-            children: [
+return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
             Stack(
-              children: [const CustomBanner(150), buildProfileImage(), customAppBar()],
+              children: [const CustomBanner(50), customAppBar()],
             ),
             const Text(
               "Eduardo Moreno",
