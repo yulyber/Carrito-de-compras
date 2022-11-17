@@ -14,10 +14,10 @@ class CartTotal extends StatelessWidget {
         // aquí debemos observar la variable total del shoppingController
         child: Text('Total: '+shoppingController.total.toString()+' usd',
             style: const TextStyle(
-                fontSize: 25.0,
-                color: Colors.blueGrey,
+                fontSize: 30.0,
+                color: Color.fromARGB(255, 214, 55, 15),
                 letterSpacing: 2.0,
-                fontWeight: FontWeight.w400)),
+                fontWeight: FontWeight.bold)),
       )),
     );
   }

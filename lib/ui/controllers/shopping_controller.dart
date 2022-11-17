@@ -13,8 +13,9 @@ class ShoppingController extends GetxController {
   void onInit() {
     super.onInit();
     // los dos elementos que vamos a tener en la tienda
-    entries.add(Product(0, "Toy car", 10));
-    entries.add(Product(1, "Toy house", 20));
+    entries.add(Product(0, "1. Carro de Juguete", 10));
+    entries.add(Product(1, "2. Casa de Juguete", 20));
+    entries.add(Product(2, "3. Pista de juguete", 30));
   }
 
   void calcularTotal() {

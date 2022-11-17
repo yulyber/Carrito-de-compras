@@ -15,14 +15,29 @@ class ProductList extends StatefulWidget {
 class _ProductListState extends State<ProductList> {
   ShoppingController shoppingController = Get.find();
 
-  @override
+    @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
+  return Obx(() => Container(
+          child: Column(
+            children: [
             Stack(
-              children: [const CustomBanner(50), customAppBar()],
+              children: [const CustomBanner(150), buildProfileImage(), customAppBar()],
+            ),
+            const Text(
+              "Eduardo Moreno",
+            style: TextStyle(
+            fontSize: 20.0,
+            color: Color.fromARGB(115, 219, 63, 123),
+            letterSpacing: 2.0,
+            fontWeight: FontWeight.bold),
+            ),
+            const Text(
+              "Email@prueba.com",
+            style: TextStyle(
+            fontSize: 10.0,
+            color: Color.fromARGB(115, 219, 63, 123),
+            letterSpacing: 2.0,
+            fontWeight: FontWeight.bold),
             ),
             // TODO
             // aquí debemos rodear el widget Expanded en un Obx para
@@ -40,6 +55,21 @@ class _ProductListState extends State<ProductList> {
       ),
     );
   }
+
+Widget buildProfileImage() {
+    return Stack(
+      alignment: Alignment.bottomCenter,
+      children: const [
+        CustomBanner(200),
+        CircleAvatar(
+          backgroundImage:
+              NetworkImage("https://previews.123rf.com/images/tuktukdesign/tuktukdesign1608/tuktukdesign160800055/61010890-icono-de-usuario-hombre-perfil-hombre-de-negocios-avatar-ilustraci%C3%B3n-vectorial-persona-glifo.jpg"),
+          radius: 60.0,
+        )
+      ],
+    );
+  }
+
 
   Widget customAppBar() {
     return Row(
