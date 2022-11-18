@@ -1,11 +1,11 @@
-Proyecto base para el segundo reto
+Barbara Alvarez Ospina, Diana Angulo Ledesma, Edgar Moreno Bohada, Yuly Berbesi Perez.
 
-El código incluye comentarios que explican la estructura del proyecto y los puntos en los que se tiene que trabajar están marcados con un TODO.
+Este segundo reto consiste en un carrito de compras
 
-El siguiente es un demo de la interfaz a la que se debe llegar (funcionalidades adicionales o mejoras a la interfaz son permitidas):
+El siguiente es un demo de la interfaz:
 
-![shoppingApp](https://user-images.githubusercontent.com/4458129/173839525-218900ed-9bcd-4f6f-9158-0b02dd9d7707.gif)
+![carrito de compras](https://user-images.githubusercontent.com/113151593/202616431-28fb2424-eca8-4342-a039-f8c097029e8d.gif)
 
 Solución:
 
-https://github.com/MisionTIC4b/f_shopping_app
+https://github.com/yulyber/Carrito-de-compras.git
