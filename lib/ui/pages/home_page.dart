@@ -11,13 +11,38 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Column(children: [
+      const Text("Tienda ABC",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              fontSize: 30.0,
+              color: Color.fromARGB(255, 255, 255, 255),
+              letterSpacing: 2.0,
+              fontWeight: FontWeight.bold)),
       Stack(
         children: [buildProfileImage(), customAppBar()],
       ),
       const SizedBox(
         height: 60,
       ),
-      const Text("Grupo 4 Carrito De Compras", textAlign: TextAlign.center,
+      const Text(
+        "Eduardo Moreno",
+        style: TextStyle(
+            fontSize: 20.0,
+            color: Color.fromARGB(255, 182, 94, 11),
+            letterSpacing: 2.0,
+            fontWeight: FontWeight.bold),
+      ),
+      const Text(
+        "Emoreno@correo.com",
+        style: TextStyle(
+            fontSize: 10.0,
+            color: Color.fromARGB(255, 182, 94, 11),
+            letterSpacing: 2.0,
+            fontWeight: FontWeight.bold),
+      ),
+      CartTotal(),
+      const Text("NRC2291 Grupo 2",
+          textAlign: TextAlign.center,
           style: TextStyle(
               fontSize: 30.0,
               color: Color.fromARGB(255, 182, 94, 11),
@@ -26,39 +51,6 @@ class HomePage extends StatelessWidget {
       const SizedBox(
         height: 20,
       ),
-      const Text(
-        "Eduardo Moreno",
-        style: TextStyle(
-            fontSize: 20.0,
-            color: Color.fromARGB(115, 219, 63, 123),
-            letterSpacing: 2.0,
-            fontWeight: FontWeight.bold),
-      ),
-      const Text(
-        "Yuly Berbesi",
-        style: TextStyle(
-            fontSize: 18.0,
-            color: Color.fromARGB(115, 219, 63, 123),
-            letterSpacing: 2.0,
-            fontWeight: FontWeight.bold),
-      ),
-      const Text(
-        "Barbara Alvarez",
-        style: TextStyle(
-            fontSize: 18.0,
-            color: Color.fromARGB(115, 219, 63, 123),
-            letterSpacing: 2.0,
-            fontWeight: FontWeight.bold),
-      ),
-      const Text(
-        "Diana",
-        style: TextStyle(
-            fontSize: 18.0,
-            color: Color.fromARGB(115, 219, 63, 123),
-            letterSpacing: 2.0,
-            fontWeight: FontWeight.bold),
-      ),
-      CartTotal()
     ]));
   }
 
@@ -68,14 +60,15 @@ class HomePage extends StatelessWidget {
       children: const [
         CustomBanner(200),
         CircleAvatar(
-          backgroundImage:
-              NetworkImage("https://previews.123rf.com/images/tuktukdesign/tuktukdesign1608/tuktukdesign160800055/61010890-icono-de-usuario-hombre-perfil-hombre-de-negocios-avatar-ilustraci%C3%B3n-vectorial-persona-glifo.jpg"),
+          backgroundImage: NetworkImage(
+              "https://social.webestica.com/assets/images/avatar/06.jpg"),
           radius: 60.0,
         )
       ],
     );
   }
-    Widget customAppBar() {
+
+  Widget customAppBar() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
@@ -86,7 +79,7 @@ class HomePage extends StatelessWidget {
                 transition: Transition.circularReveal,
                 duration: const Duration(seconds: 1)),
             child: const Icon(
-              Icons.menu_rounded,
+              Icons.shopping_cart,
               size: 50,
               color: Colors.white,
             ),
@@ -96,4 +89,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

@@ -24,19 +24,12 @@ return Scaffold(
             Stack(
               children: [const CustomBanner(50), customAppBar()],
             ),
+        
             const Text(
-              "Eduardo Moreno",
+              "Mi carrito",
             style: TextStyle(
-            fontSize: 20.0,
-            color: Color.fromARGB(115, 219, 63, 123),
-            letterSpacing: 2.0,
-            fontWeight: FontWeight.bold),
-            ),
-            const Text(
-              "Email@prueba.com",
-            style: TextStyle(
-            fontSize: 10.0,
-            color: Color.fromARGB(115, 219, 63, 123),
+            fontSize: 30.0,
+            color: Color.fromARGB(115, 22, 133, 59),
             letterSpacing: 2.0,
             fontWeight: FontWeight.bold),
             ),
