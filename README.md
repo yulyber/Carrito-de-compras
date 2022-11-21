@@ -1,4 +1,4 @@
-Barbara Alvarez Ospina, Diana Angulo Ledesma, Edgar Moreno Bohada, Yuly Berbesi Perez.
+Edgar Moreno Bohada, Yuly Berbesi Perez.
 
 Este segundo reto consiste en un carrito de compras
 
